@@ -46,7 +46,7 @@
     "build:css": "stylus -c --include-css ./src/stylus/App.styl -o ./src/assets/bundle.css -m --sourcemap-base ../stylus",
     "build:js": "browserify ./src/js/App.js -d | exorcist ./src/assets/bundle.js.map > ./src/assets/bundle.js",
     "build": "npm-run-all -p build:css build:js",
-    "watch:css": "stylus -c -w --include-css ./src/stylus/App.styl -o ./src/assets/bundle.css -m --sourcemap-base ../stylus",
+    "watch:css": "node-sass --watch ./src/sass/screen.sass -o ./src/assets/",
     "watch:js": "watchify ./src/js/App.js -v -o \"exorcist ./src/assets/bundle.js.map > ./src/assets/bundle.js\" -d",
     "watch:server": "browser-sync start --server ./ --startPath src/assets/",
     "watch": "npm-run-all -p watch:css watch:js watch:server",
