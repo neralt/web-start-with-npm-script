@@ -50,7 +50,7 @@
     "watch:js": "watchify ./src/js/App.js -v -o \"exorcist ./src/assets/bundle.js.map > ./src/assets/bundle.js\" -d",
     "watch:server": "browser-sync start --server ./ --startPath src/assets/",
     "watch": "npm-run-all -p watch:css watch:js watch:server",
-    "release:css": "stylus -c --include-css ./src/stylus/App.styl -o ./dist/bundle.css",
+    "release:css": "node-sass ./src/sass/screen.sass -o ./dist/",
     "release:js": "cross-env NODE_ENV=production browserify ./src/js/App.js | uglifyjs -c warnings=false -m > ./dist/bundle.js",
     "release:clean": "rimraf ./dist",
     "release:copy": "cpx \"./src/assets/**/!(*.js|*.css|*.map)\" ./dist",
