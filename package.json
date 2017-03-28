@@ -57,6 +57,7 @@
     "release": "npm-run-all -s release:clean release:copy -p release:css release:js"
   },
   "dependencies": {
+    "node-sass": "^4.5.1",
     "normalize.css": "^5.0.0"
   },
   "devDependencies": {
