@@ -1,6 +1,8 @@
+import $ from 'jquery';
 import Util from './Util.js';
 
-// Application entry point
-window.onload = () => {
-  new Util("test name チェンジ");
-};
+$(function(){
+    // 実行する処理
+    new Util("テストテストUtil");
+    $(".date").html("変更");
+});

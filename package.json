@@ -56,8 +56,7 @@
     "release:copy": "cpx \"./src/assets/**/!(*.js|*.css|*.map)\" ./dist",
     "release": "npm-run-all -s release:clean release:copy -p release:css release:js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
     "babel-preset-power-assert": "^1.0.0",
@@ -69,6 +68,7 @@
     "cross-env": "^3.1.4",
     "esdoc": "^0.5.2",
     "exorcist": "^0.4.0",
+    "jquery": "^3.2.1",
     "node-sass": "^4.5.1",
     "npm-run-all": "^4.0.0",
     "power-assert": "^1.4.2",
